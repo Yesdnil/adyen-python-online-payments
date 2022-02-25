@@ -24,11 +24,11 @@ def adyen_sessions(host_url):
 
     request = {}
 
-    request['amount'] = {"value": "1000", "currency": "EUR"}
+    request['amount'] = {"value": "2500", "currency": "GBP"}
     request['reference'] = f"Reference {uuid.uuid4()}"  # provide your unique payment reference
     # set redirect URL required for some payment methods
     request['returnUrl'] = f"{host_url}/redirect?shopperOrder=myRef"
-    request['countryCode'] = "NL"
+    request['countryCode'] = "GB"
 
     result = adyen.checkout.sessions(request)
 

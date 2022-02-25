@@ -56,8 +56,8 @@ async function createAdyenCheckout(session) {
                 holderNameRequired: true,
                 name: "Credit or debit card",
                 amount: {
-                    value: 1000,
-                    currency: "EUR"
+                    value: 2500,
+                    currency: "GBP"
                 }
             },
             paypal: {
@@ -66,7 +66,7 @@ async function createAdyenCheckout(session) {
                     value: 1000
                 },
                 environment: "test",
-                countryCode: "US"   // Only needed for test. This will be automatically retrieved when you are in production.
+                countryCode: "GB"   // Only needed for test. This will be automatically retrieved when you are in production.
             }
         },
         onPaymentCompleted: (result, component) => {
