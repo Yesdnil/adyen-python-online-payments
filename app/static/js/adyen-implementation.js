@@ -43,7 +43,7 @@ async function createAdyenCheckout(session) {
 
     const configuration = {
         clientKey,
-        locale: "en_US",
+        locale: "en_GB",
         environment: "test",  // change to live for production
         showPayButton: true,
         session: session,
@@ -54,7 +54,9 @@ async function createAdyenCheckout(session) {
             card: {
                 hasHolderName: true,
                 holderNameRequired: true,
+                enableStoreDetails: true,
                 name: "Credit or debit card",
+                billingAddressRequired: false,
                 amount: {
                     value: 2500,
                     currency: "GBP"
